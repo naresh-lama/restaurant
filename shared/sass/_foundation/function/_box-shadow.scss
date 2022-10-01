@@ -1,0 +1,6 @@
+// @desc - variable/_box-shadow.scss を使用する関数
+// @param {String} $key - 'box-shadow'の高さ（bottom,middle）を指定。
+// @example - box-shadow(bottom) => 0 4px 16px rgba(0, 0, 0, 0.15)
+@function box-shadow($key) {
+	@return map-get($box-shadow, $key);
+}

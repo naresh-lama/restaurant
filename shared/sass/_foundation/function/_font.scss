@@ -1,0 +1,6 @@
+// @desc - variable/_font.scss を使用する関数
+// @param {String} $key - font-{} プロパティを指定。
+// @example - font(size) => 62.5%
+@function font($key) {
+	@return map-get($font, $key);
+}

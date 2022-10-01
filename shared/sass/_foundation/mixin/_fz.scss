@@ -1,0 +1,5 @@
+// フォントサイズ指定をIE対応も行ったremに設定
+@mixin fz($size:14) {
+	font-size: $size + px;
+	font-size: ($size / 10) * 1rem;
+}

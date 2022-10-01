@@ -1,0 +1,6 @@
+// @desc - 'box-shadow'を出力します。
+// @param {String} $key - 指定する高さ（bottom,middle）。
+// @example - @include box-shadow(bottom); => box-shadow: box-shadow(0 4px 16px rgba(0, 0, 0, 0.15));
+@mixin box-shadow($key: bottom) {
+	box-shadow: box-shadow($key);
+}

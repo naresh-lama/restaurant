@@ -1,0 +1,122 @@
+/**
+ * 1. `width`と`height`に`margin`と`border`を含めます。
+ * 2. ドキュメントのルートフォントサイズを指定します（`rem`で参照）。
+ */
+html {
+	box-sizing: border-box; /* 1 */
+	font-size: font(size); /* 2 */
+	overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit; /* 1 */
+}
+
+/**
+ * 'reset.css'の'font: inherit;'を上書きします。
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, menu, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input {
+	font-family: font(family);
+}
+
+/**
+ * 1. できる限り禁則処理が実行されるようにします。
+ * 2. フォントの持っているカーニング情報を使用します。
+ * 3. Chrome、Safari、FireFoxのフォントレンダリングを合わせます。
+ */
+body {
+	word-wrap: break-word; /* 1 */
+	overflow-wrap: break-word; /* 1 */
+	overflow-x: hidden;
+	background-color: colors(white);
+	color: colors(black);
+	font-weight: font(weight);
+	font-kerning: normal; /* 2 */
+	line-height: font(height);
+	letter-spacing: font(spacing);
+	-webkit-font-smoothing: subpixel-antialiased; /* 3 */
+	-moz-osx-font-smoothing: auto; /* 3 */
+}
+
+/**
+ * 'a'のデフォルトスタイルを指定します。
+ * 1. iOSのSafariとChromeで、`text-decoration: underline;`の罫線が
+ *    グリフやディセンダで途切れないようにします。
+ *    https://css-tricks.com/almanac/properties/t/text-decoration-skip/
+ */
+a {
+	text-decoration: none;
+	color: colors(link);
+	-webkit-text-decoration-skip: none; /* 1 */
+	&:hover {
+		text-decoration: underline;
+		color: colors(link-dark);
+	}
+}
+
+/**
+ * 'input'と'textarea'の'placeholder'をリセットします。
+ */
+input,
+textarea {
+	&::placeholder {
+		color: colors(gray-dark);
+	}
+}
+
+/**
+ * 画像を縦に並べたときに余白が出ない様にします。
+ */
+img {
+	vertical-align: top;
+	font-size: 0;
+	line-height: 0;
+}
+
+
+/**
+ * 'button'のスタイルをリセットします。
+ */
+button {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	padding: 0;
+	appearance: none;
+}
+
+/**
+ * 'radio'と'checked'の'margin'をリセットします。
+ */
+[type="radio"],
+[type="checked"] {
+	margin: 0;
+}
+
+/**
+ * IEとEdgeはスピンボタンに未対応のため、ChromeとFireFoxで非表示にします。
+ */
+[type="number"]::-webkit-outer-spin-button,
+[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+[type="number"] {
+	-moz-appearance: textfield;
+}
+

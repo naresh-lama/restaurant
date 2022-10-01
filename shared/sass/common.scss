@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+@import "_foundation/variable/_font.scss";
+@import "_foundation/variable/_colors.scss";
+@import "_foundation/variable/_icons.scss";
+@import "_foundation/function/_font.scss";
+@import "_foundation/function/_colors.scss";
+@import "_foundation/function/_icons.scss";
+@import "_foundation/function/_rem.scss";
+@import "_foundation/function/_px.scss";
+@import "_foundation/function/_em.scss";
+@import "_foundation/mixin/_clearfix.scss";
+@import "_foundation/mixin/_fz.scss";
+@import "_foundation/mixin/_icon.scss";
+@import "_foundation/mixin/_mediaquery.scss";
+@import "_foundation/_reset.scss";
+@import "_foundation/_base.scss";
+@import "_layout/nav";
+// @import "_object/project/main";
+
+.head {
+    padding: 16px;
+    background-color: colors(black);
+}

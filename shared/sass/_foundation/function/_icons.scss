@@ -1,0 +1,6 @@
+// @desc - variable/_icons.scss を使用する関数
+// @param {String} $icon-name - アイコンフォント名を指定。
+// @example - icons(chef) => \e907
+@function icons($icon-name) {
+	@return map-get($icons, $icon-name);
+}

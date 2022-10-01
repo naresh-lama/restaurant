@@ -1,0 +1,6 @@
+// @desc - variable/_colors.scss を使用する関数
+// @param {String} $color-name - スタイルガイドのカラー名を指定。
+// @example - colors(primary) => #DCAE5A
+@function colors($colors-name) {
+	@return map-get($colors, $colors-name);
+}
